@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{# CRIAR VARIÁVEIS COM NJK #}
+{% set bodyId = "page-login" %}
+
+{% block title %}
+    <title>Login</title>
+{% endblock title %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/styles/login.css">
+{% endblock styles %}     
+
+{% block content %}
+    {# INCLUSÃO DE PARTIALS #}
+    {% include "partials/header.html" %}
+    {% include "partials/footer.html" %}
+{% endblock content %}
+
+{% block scripts %}
+{% endblock scripts %}
+
+
+    
