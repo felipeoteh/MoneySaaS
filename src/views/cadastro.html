@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{# CRIAR VARIÁVEIS COM NJK #}
+{% set bodyId = "page-login" %}
+
+{% block title %}
+    <title>Cadastro</title>
+{% endblock title %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/styles/login.css">
+{% endblock styles %}     
+
+{% block content %}
+    {# INCLUSÃO DE PARTIALS #}
+    {% include "partials/header.html" %}
+    {% include "partials/footer.html" %}
+    {{ couples }}
+
+    Número de registros: {{total}}
+
+    {% for couple in couples %}
+
+        <ul class="couple-{{couple.id}}">
+            <li>
+                Couple: <b>{{couple.name}}</b><br>
+                IdHusband: <b>{{couple.idHusband}}</b><br>
+                IdWife: <b>{{couple.idWife}}</b><br>
+                Data de Cadastro: <b>{{couple.date}}</b><br>
+            </li>
+        </ul>
+
+    {% endfor %}
+
+{% endblock content %}
+
+{% block scripts %}
+{% endblock scripts %}
+    
